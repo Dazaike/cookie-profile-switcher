@@ -2,8 +2,6 @@
 
 Chrome extension for switching between multiple logins on the same website without logging out. It also includes a live editor for cookies and localStorage.
 
-Based on the original Cookie Profile Switcher by Emery Steele (GPL v3).
-
 ## Install
 
 This build is not on the Chrome Web Store. Install it manually:

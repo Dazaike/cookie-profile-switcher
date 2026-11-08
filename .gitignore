@@ -1,0 +1,4 @@
+output/
+*.zip
+.env
+*.log

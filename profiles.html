@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Cookie Profile Switcher</title>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/profiles.css">
+</head>
+<body>
+	<section id="popupShell" class="popup-shell">
+		<div class="popup-frame">
+			<div id="popupTrack" class="popup-track">
+				<section class="popup-view popup-view-home">
+					<header class="popup-header">
+						<div class="brand-mark">
+							<img src="cookie.png" alt="" />
+						</div>
+						<div class="domain-block">
+							<span class="caption">Current domain</span>
+							<h1 id="domain_label">Undefined</h1>
+						</div>
+					</header>
+
+					<div class="active-profile">
+						<span class="caption">Active profile</span>
+						<strong id="profile_label">Undefined</strong>
+					</div>
+
+					<div class="popup-tools">
+						<div class="tool-metrics">
+							<span class="metric-pill"><span id="cookie_count">0</span> cookies</span>
+							<span class="metric-pill" id="status_message">Ready</span>
+						</div>
+						<div class="tool-actions">
+							<a href="#" id="copyDomain_button" class="tool-button">Copy</a>
+							<a href="#" id="refreshTab_button" class="tool-button">Refresh</a>
+							<a href="#" id="saveSession_button" class="tool-button">Save</a>
+							<a href="#" id="toggleEditor_button" class="tool-button">Editor</a>
+						</div>
+					</div>
+
+					<table id="profileTable" class="profile-table">
+						<tr class="table-heading">
+							<th>Profiles</th>
+							<th>Actions</th>
+						</tr>
+						<tr class="create-row">
+							<td><input type="textbox" id="profileName_input" placeholder="New profile name"></input></td>
+							<td><a href="#" id="profileCreate_button">Create</a></td>
+						</tr>
+					</table>
+				</section>
+
+				<section class="popup-view popup-view-editor">
+					<header class="popup-header popup-header-editor">
+						<a href="#" id="closeEditor_button" class="icon-link icon-link-back" title="Back" aria-label="Back">
+							<i class="fa fa-arrow-left" aria-hidden="true"></i>
+						</a>
+						<div class="domain-block">
+							<span id="editorCaption" class="caption">Live cookie editor</span>
+							<h1 id="editorTitle">Current domain cookies</h1>
+						</div>
+						<div id="deleteActionGroup" class="delete-action-group">
+							<a href="#" id="deleteAllCookies_button" class="tool-button tool-button-danger">Delete all</a>
+							<a href="#" id="refreshAfterDelete_button" class="tool-button refresh-after-delete">Refresh</a>
+						</div>
+					</header>
+
+					<div class="editor-toolbar">
+						<input type="text" id="cookieFilter_input" placeholder="Filter cookies" />
+						<div class="editor-toolbar-actions">
+							<a href="#" id="addCookie_button" class="tool-button">Add</a>
+							<div id="exportGroup" class="expand-group">
+								<a href="#" id="toggleExportOptions_button" class="tool-button">Export</a>
+								<div id="copyToast" class="copy-toast" aria-hidden="true">Copied</div>
+								<div id="exportOptions" class="expand-options">
+									<a href="#" id="exportJson_button" class="tool-button">JSON</a>
+									<a href="#" id="exportNetscape_button" class="tool-button">Netscape</a>
+								</div>
+							</div>
+							<a href="#" id="importCookies_button" class="tool-button">Import</a>
+						</div>
+					</div>
+
+					<div class="editor-meta">
+						<a href="#" id="modeCookies_button" class="tool-button tool-button-primary">Cookies</a>
+						<a href="#" id="modeStorage_button" class="tool-button">Local storage</a>
+						<span class="metric-pill"><span id="editor_cookie_count">0</span> <span id="editorCountLabel">live cookies</span></span>
+						<span class="metric-pill">Domain: <span id="editor_domain_label">Undefined</span></span>
+					</div>
+
+					<section id="transferPanel" class="transfer-panel" hidden>
+						<div class="transfer-panel-header">
+							<div>
+								<span class="caption" id="transferPanelCaption">Transfer</span>
+								<h2 id="transferPanelTitle">Cookie transfer</h2>
+							</div>
+							<a href="#" id="closeTransfer_button" class="tool-button">Close</a>
+						</div>
+						<textarea id="transferTextarea" class="transfer-textarea" placeholder="Paste JSON or Netscape cookie text here"></textarea>
+						<div class="transfer-actions">
+							<a href="#" id="applyTransfer_button" class="tool-button tool-button-primary">Apply</a>
+						</div>
+					</section>
+
+					<div id="cookieList" class="cookie-list"></div>
+				</section>
+			</div>
+		</div>
+	</section>
+	<script src="scripts/jquery-3.7.1.min.js"></script>
+	<script src="profiles.js"></script>
+</body>
+</html>

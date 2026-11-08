@@ -1,0 +1,13 @@
+{
+  "name" : "Cookie Profile Switcher",
+  "version" : "1.5.0",
+  "description" : "Store & Manage multiple cookie profiles per domain.",
+  "manifest_version": 3,
+  "permissions": [ "cookies", "tabs", "storage", "scripting" ],
+  "host_permissions": [ "http://*/*", "https://*/*" ],
+  "icons": { "16": "cookie.png", "48": "cookie.png", "128": "cookie.png" },
+  "action": {
+    "default_icon": "cookie.png",
+	"default_popup": "profiles.html"
+  }
+}

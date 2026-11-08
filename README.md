@@ -1,7 +1,12 @@
 # Cookie Profile Switcher
 
 ## Install
-Install through the Chrome Webstore at: https://chrome.google.com/webstore/detail/cookie-profile-switcher/dicajblfgcpecbkhkjaljphlmkhohelc
+This build is not on the Chrome Web Store. Install it manually:
+1. Download `cookie-profile-switcher-v1.5.0.zip` from the [latest release](https://github.com/Dazaike/cookie-profile-switcher/releases/latest) and unzip it.
+2. Open `chrome://extensions` and turn on Developer mode.
+3. Click "Load unpacked" and select the unzipped folder.
+
+Based on the original Cookie Profile Switcher by Emery Steele (GPL v3).
 
 ## What's new in v1.5.0
 * Local storage editor next to the cookie editor.
